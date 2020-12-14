@@ -46,18 +46,17 @@
   </li>
   <?php if(isset($_SESSION['office'])) {?>
   <li class="nav-item">
-    <p><a class="nav-link" href="navbar.php?logout='1'" style="color: red;">Logout</a></p> 
+    <p><a class="nav-link" href="home.php?logout='1'" style="color: red;">Logout</a></p> 
   </li>
   <li class="nav-item">
-    <a class="nav-link" href='info_office.php?id="<?php echo $Result2['id']; ?>' style="color:white;">ลงข้อมูล</a>
-    <p><a class="nav-link" href="home.php?logout='1'" style="color: red;">Logout</a></p>
+    <a class="nav-link" href='info_office.php?id="<?php echo $Result2['id']; ?>' style="color:white;">กรอกข้อมูล</a>
   </li>
   <?php } elseif(isset($_SESSION['firstname'])) {?>
   <li class="nav-item">
     <p><a class="nav-link" href="home.php?logout='1'" style="color: red;">Logout</a></p> 
   </li>
   <li class="nav-item">
-    <a class="nav-link" href='info.php?id="<?php echo $Result['id']; ?>' style="color:white;">ลงประวัติ</a>
+    <a class="nav-link" href='info.php?id="<?php echo $Result['id']; ?>' style="color:white;">กรอกประวัติ</a>
   </li>
   <?php }?>
 </ul>

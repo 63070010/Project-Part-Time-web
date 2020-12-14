@@ -21,7 +21,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>หน้ากรอกข้อมูล</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -37,7 +37,7 @@
 
     <div class="center">
         <!-- Check Error -->
-<form method="POST" action="info_db_office.php">
+<form method="POST" action="info_db_office.php" enctype="multipart/form-data">
     <?php if (isset($_SESSION['error'])) : ?>
         <div class="error">
             <h3>
@@ -67,6 +67,10 @@
     <div class="form-group col-md-6">
       <label for="inputCity">เบอร์ติดต่อ</label>
       <input type="text" class="form-control" id="phone" name="phone">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputCity">ค่าตอบแทนรายวัน</label>
+      <input type="text" class="form-control" id="price" name="price">
     </div> 
   </div>
   <div class="form-group">
@@ -75,7 +79,7 @@
   </div>
   <div class="form-group">
     <label for="phone">อัพโหลดพื้นหลังบริษัท</label>
-    <input type="file" class="form-control" name="fileToUpload" id="fileToUpload">
+    <input type="file" class="form-control" name="fileToUpload2" id="fileToUpload2">
   </div>
   <textarea id="detail" name="detail" rows="4" cols="50" placeholder="รายละเอียดงาน"></textarea>
   <button type="submit" class="btn btn-primary" value="update" name="info_update">submit</button>

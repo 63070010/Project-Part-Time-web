@@ -51,15 +51,16 @@
             </div>
         <?php endif ?>
         <div class="row">
-            <div class="col-4">
-                <div class="card border-primary mb-3" style="max-width: 30rem;">
-            <div class="card-header">Header</div>
-                <form action="home.php" method="GET">
-                    
-                
-                </form>
+        <div class="col-4">
+            <form action="show.php" method="GET" style="width : 100%;">
+            <div class="form-group">
+                <label for="search">SEARCH</label>
+                <input type="text" class="form-control" id="search" placeholder="search" name="search">
             </div>
-        </div>
+            <button type="submit" class="btn btn-primary" value="search">submit</button>
+            </form>
+        </div>  
+            
 
             <div class="col-8">
                 <!-- image slide -->

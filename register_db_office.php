@@ -42,7 +42,7 @@
 
         if (count($errors) == 0) {
             $password = md5($password);
-            $sql = "INSERT INTO office (email, username, password, office, province, detail, phone) VALUES ('$email', '$username', '$password', '$office', '$province', '', '')";
+            $sql = "INSERT INTO office (email, username, password, office, province, detail, phone, price, filesname, filesname2) VALUES ('$email', '$username', '$password', '$office', '$province', '', '', 0, '', '')";
             mysqli_query($conn, $sql);
 
             $_SESSION['username'] = $username;
@@ -53,5 +53,6 @@
             header("location: register_office.php");
         }
     }
+    
 
 ?>
